@@ -19,7 +19,8 @@ public class MainService {
     private final NoteService noteService;
 
     public MainDataDto getDefaultMainData() {
-        List<Notebook> notebookList = notebookService.getNotebookList();
+//        List<Notebook> notebookList = notebookService.getNotebookList();
+        List<Notebook> notebookList = notebookService.getTopNotebookList();
 
         if (notebookList.isEmpty()) {
             Notebook notebook = this.saveDefaultNotebook();
